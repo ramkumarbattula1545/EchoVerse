@@ -29,8 +29,7 @@ from transformers import pipeline
 
 # Map language to correct model
 TRANSLATION_MODELS = {
-    "Hindi": "Helsinki-NLP/opus-mt-en-hi",
-    "Telugu": "Helsinki-NLP/opus-mt-en-mul",  # Multi Indian languages (includes te)
+     # Multi Indian languages (includes te)
     "Spanish": "Helsinki-NLP/opus-mt-en-es",
     "French": "Helsinki-NLP/opus-mt-en-fr"
 }
@@ -49,3 +48,4 @@ def translate_text(text, target_lang="Hindi"):
     # Perform translation
     translated = translator(text, max_length=512)[0]['translation_text']
     return translated
+
